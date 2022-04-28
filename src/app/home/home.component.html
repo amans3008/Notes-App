@@ -1,0 +1,22 @@
+<div class="container ">
+    <!-- <button class="btn btn-primary" routerLink="cards" (click)="onclick()"> Add </button> -->
+    <br>
+    <br>
+    <button class="btn btn-primary" (click)="onDeleteAll()"> Delete All </button>
+    <br>
+    <br>
+    <div class="row">
+        
+        <div *ngFor="let user of notes" class="card" style="width: 18rem;">
+        <div class="card-body col-sm-5">
+          <h5 class="card-title">{{ user.Value.Title }}</h5>
+          <p>{{ user.Value.Notes }}</p>
+          <button class="btn btn-primary" (click)="onDelete(user)">Delete</button>
+
+          <br>
+          <!-- <p class="card-text">{{ user.Notes }}</p> -->
+        </div>
+      </div>
+    </div>
+<router-outlet></router-outlet>
+</div>

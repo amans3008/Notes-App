@@ -1,0 +1,14 @@
+
+<div class="container">
+    <form #formData="ngForm" (ngSubmit)="submit(formData.value)">
+        <div class="form-group">
+            <label for="title">Title</label>
+          <input type="text" class="form-control" required id="exampleFormControlInput1" placeholder="Title" ngModel name="Title">
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" required id="exampleFormControlTextarea1" rows="6" placeholder="Notes" ngModel name="Notes"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" > Submit </button>
+    </form>
+    <router-outlet></router-outlet>
+</div>
